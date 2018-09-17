@@ -123,11 +123,12 @@ ALTER TABLE formation.personne SET TBLPROPERTIES ('comment' = 'Personne informat
 
 
 -- 10) En SSH, avec le client ligne de commande Hive (commande hive) afficher la structure de la table PERSONNE avec la commande SQL DESCRIBE FORMATTED. Vérifier que le commentaire ajouté précédemment apparaît
-hive
-DESCRIBE FORMATTED formation.personne
+--hive
+--DESCRIBE FORMATTED formation.personne
+
 -- Commentaire de la table PERSONNE a bien été mis à jour
 
 
 -- 11) Utiliser le mode d'exécution de Hive scripté (commande hive -e) pour créer un fichier CSV sans-entête sur MapR-FS dans le dossier /user/mapr/formation/hive/LIBOFFRE contenant 2 champs
-hive -e 'SELECT libelle, idoffre  FROM formation.offre ORDER BY libelle' | hadoop fs -put - /user/maria_dev/formation/data/hive/offre_csv_export.csv
+-- hive -e 'SELECT libelle, idoffre  FROM formation.offre ORDER BY libelle' | hadoop fs -put - /user/maria_dev/formation/data/hive/offre_csv_export.csv
 
