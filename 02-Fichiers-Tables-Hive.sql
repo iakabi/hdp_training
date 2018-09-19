@@ -92,7 +92,7 @@ FROM formation.offre as o,
 	ORDER BY nb DESC
 	LIMIT 1) as c
 WHERE o.idoffre = c.idoffre
--- RESULT : 
+-- RESULT : Future-proofed actuating circuit
 
 -- 3) Quelle est la date de la plus ancienne offre ?
 SELECT TO_DATE(from_unixtime(UNIX_TIMESTAMP(dtouverture, 'yyyy/MM/dd'))) as dtouverture_date
